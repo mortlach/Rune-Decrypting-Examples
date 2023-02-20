@@ -10,9 +10,9 @@ import gematria as gem
 class BasicGeneticAlgorithm:
 
     DNA_POOL_SIZE = 40
-    OFFSPRING_POOL_SIZE = 40
-    NUM_ITER = 250
-    MAX_MUTATIONS = 1
+    OFFSPRING_POOL_SIZE = 20
+    NUM_ITER = 100
+    MAX_MUTATIONS = 2
     
     def __init__(self):
         self.mean_score_per_it = None
@@ -74,7 +74,7 @@ class BasicGeneticAlgorithm:
                     current_sol = {p: c for p, c in zip(gem.runes, dna)}
                     # get PT using current_solution and score it
                     current_pt = self.cipher.decode(ciphertext_to_solve, current_sol)
-                    dna_scores[dna] = self.language_model.get_sentence_log_probability(current_pt)
+                    dna_scores[dna] = self.language_model.get_sentence_log_probability2(current_pt)
                     # keep the best solution and scores
                     if dna_scores[dna] > self.best_score:
                         self.best_score = dna_scores[dna]

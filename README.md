@@ -8,9 +8,9 @@ This is for demonstration purposes.
 # 1: Mono-Alphabetic Substitution Ciphers:  Genic Algorithm Solver
 
 ## Introduction
-Information on  mono-alphabetic substitution cipher and genetic algorithms (GA) can be found in many places. Here a very simple asexually reproducing GA is used to a general mono-alphabetic cipher.
+Information on  mono-alphabetic substitution cipher and genetic algorithms (GA) can be found in many places. Here a very simple asexually reproducing GA is used to solve a general mono-alphabetic cipher.
 Briefly: a pool of solutions is generated, and scored using the language-model. Each solution has offspring, that are mutated slightly from the previous generation. The most successfully solutions survive and can reproduce  again next generation.  
-The data used to fit each generation is contained in two "log transition probability matrices" one for rune uni-grams and 1 fro rune bi-grams. For this example these have been calculated foreword lengths 1 to 14 runes using the Project Gutenberg data. 
+The data used to fit each generation is contained in two "log transition probability matrices" one for rune uni-grams and 1 for rune bi-grams. For this example these have been calculated foreword lengths 1 to 14 runes using the Project Gutenberg data. 
 Log Probabilities are found via a simple look-up and added together 
 
 ## Requirements 
