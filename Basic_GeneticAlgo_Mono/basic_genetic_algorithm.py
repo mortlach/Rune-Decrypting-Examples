@@ -9,9 +9,9 @@ import gematria as gem
 
 class BasicGeneticAlgorithm:
 
-    DNA_POOL_SIZE = 40
-    OFFSPRING_POOL_SIZE = 20
-    NUM_ITER = 100
+    DNA_POOL_SIZE = 20
+    OFFSPRING_POOL_SIZE = 10
+    NUM_ITER = 1000
     MAX_MUTATIONS = 2
     
     def __init__(self):

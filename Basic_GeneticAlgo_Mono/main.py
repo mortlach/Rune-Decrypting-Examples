@@ -16,7 +16,7 @@ if __name__ == "__main__":
     lm = LanguageModel()
     original_plaintext_english_no_punctuation = ''.join([x for x in original_plaintext_english if x.isalpha() or (x == ' ')])
     original_plaintext_runes = ' '.join([gem.translate_to_gematria(x) for x in original_plaintext_english_no_punctuation.split()])
-    original_plaintext_score = lm.get_sentence_log_probability(original_plaintext_runes)
+    original_plaintext_score = lm.get_sentence_log_probability2(original_plaintext_runes)
 
     cipher = MonoCipher()
     # get message to solve  from initial message
